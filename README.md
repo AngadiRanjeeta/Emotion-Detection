@@ -29,8 +29,8 @@ This repository contains the code for an emotion detection model using Convoluti
 ## Results
 
 The model achieves the following performance:
-- **Validation Accuracy**: X.XX
-- **Test Accuracy**: X.XX
+- **Validation Accuracy**: 0.5634
+- **Test Accuracy**: 0.4947
 
 ## Visualizations
 
