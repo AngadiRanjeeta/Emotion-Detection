@@ -39,31 +39,37 @@ Training and validation accuracy and loss curves are provided to visualize the t
 ## Dependencies
 
 - TensorFlow
-- NumPy
-- Pandas
+- Keras
 - Matplotlib
+- Numpy
+- Sklearn
+- Seaborn
 
-## **Summary of Approach and Methodology**
-    
- **Data Loading and Preprocessing:**
+## Approach and Methodology
 
-- Used ImageDataGenerator to load and preprocess images for training, validation, and testing.
-- Applied data augmentation techniques like rescaling and horizontal flipping to increase the diversity of the training set.
+1. **Data Preparation:**
+    - Defined dataset paths for training, validation, and test sets.
+    - Utilized `ImageDataGenerator` for data augmentation (horizontal flipping) and normalization.
 
-**Model Architecture:**
+2. **Model Architecture:**
+    - Built a Convolutional Neural Network (CNN) with three convolutional layers followed by max-pooling and dropout layers to prevent overfitting.
+    - Used a fully connected layer with dropout before the final softmax layer to classify emotions into 7 categories.
 
-- Designed a CNN with three convolutional layers followed by max-pooling and dropout layers to reduce overfitting.
-- Added dense layers for classification with a final softmax layer for outputting probabilities for each emotion class.
+3. **Model Compilation:**
+    - Compiled the model using the Adam optimizer and categorical cross-entropy loss, with accuracy as the evaluation metric.
 
-**Training and Optimization:**
+4. **Training:**
+    - Set up callbacks: ReduceLROnPlateau to adjust the learning rate, ModelCheckpoint to save the best model, and EarlyStopping to stop training if the model's performance didn't improve for a specified number of epochs.
+    - Trained the model on the training data while validating it on the validation set.
 
-- Used Adam optimizer for training and categorical cross-entropy as the loss function.
-- Implemented callbacks such as ReduceLROnPlateau, ModelCheckpoint, and EarlyStopping for better training management and optimization.
+5. **Evaluation:**
+    - Evaluated the model's performance on both the validation and test sets to calculate accuracy.
+    - Plotted the training history to visualize accuracy and loss over epochs.
 
-**Evaluation and Testing:**
-
-- Evaluated the model on validation and test sets, reporting accuracy.
-- Generated and visualized a confusion matrix and classification report to understand the performance and misclassifications.
+6. **Predictions and Analysis:**
+    - Predicted emotions on the test set and calculated the accuracy.
+    - Generated a confusion matrix and classification report to evaluate performance across all classes.
+    - Displayed some misclassified examples for further analysis.
 
 ## License
 
