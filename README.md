@@ -43,6 +43,28 @@ Training and validation accuracy and loss curves are provided to visualize the t
 - Pandas
 - Matplotlib
 
+## **Summary of Approach and Methodology**
+    
+ **Data Loading and Preprocessing:**
+
+- Used ImageDataGenerator to load and preprocess images for training, validation, and testing.
+- Applied data augmentation techniques like rescaling and horizontal flipping to increase the diversity of the training set.
+
+**Model Architecture:**
+
+- Designed a CNN with three convolutional layers followed by max-pooling and dropout layers to reduce overfitting.
+- Added dense layers for classification with a final softmax layer for outputting probabilities for each emotion class.
+
+**Training and Optimization:**
+
+- Used Adam optimizer for training and categorical cross-entropy as the loss function.
+- Implemented callbacks such as ReduceLROnPlateau, ModelCheckpoint, and EarlyStopping for better training management and optimization.
+
+**Evaluation and Testing:**
+
+- Evaluated the model on validation and test sets, reporting accuracy.
+- Generated and visualized a confusion matrix and classification report to understand the performance and misclassifications.
+
 ## License
 
 This project is licensed under the MIT License.
