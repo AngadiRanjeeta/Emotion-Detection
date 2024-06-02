@@ -22,8 +22,7 @@ This repository contains the code for an emotion detection model using Convoluti
 4. **Upload Dataset**:
     - [Download the dataset](https://drive.google.com/file/d/1G36Lpdgq3ha1vbMcI4yOFLGNhVZ_6glG/view).
     - Upload the downloaded dataset to your Google Drive and mount it in the Colab notebook as shown in the code.
-
-
+  
 5. **Run the Notebook**:
     - Execute the cells in the notebook sequentially.
 
